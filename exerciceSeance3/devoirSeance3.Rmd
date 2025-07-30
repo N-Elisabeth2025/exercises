@@ -3,9 +3,9 @@ title: "exerciceSeance3"
 author: "elisabeth"
 date: "2025-07-24"
 output:
-  word_document: default
-  html_document: default
   pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -33,18 +33,22 @@ library(readr)
 # Etape 1 : Importer via un csv
 ```{r}
 gdp <- read.csv("/cloud/project/chapter6data.csv", na.strings = c("","NA"))
+
+colnames(gdp)
 ```
 
 # Étape 2 : Importer via une feuille de calcul
 
 ```{r}
 locations <- gsheet2tbl(" https://docs.google.com/spreadsheets/d/1nehKEBKTQx11LZuo5ZJFKTVS0p5y1ysMPSOSX_m8dS8/edit?usp=sharing")
+
+colnames(locations)
 ```
 
 # Etape 3 : Supprimer la colonne: X1 du bloc de données gdp
 
 ```{r}
-gdp$x1<- NULL
+gdp$X1 <- NULL
 
 colnames(gdp)
 ```
@@ -53,17 +57,23 @@ colnames(gdp)
 
 ```{r}
 gdp2 <- filter(gdp, country == "Canada" | country == "Japan" | country == "United States" | country == "Belgium" | country == "France")
+
+colnames(gdp2)
 ```
 
 # Etape 5 : "Rallonge" les données
 
 ```{r}
 gdp3 <- pivot_longer(gdp2, cols = -country, names_to = "year", values_to ="gdp")
+
+colnames(gdp3)
 ```
 
-#Étape 6 : Fusionner les jeux de données
+#  Étape 6 : Fusionner les jeux de données
 
 ```{r}
 gdp4 <- left_join(locations, gdp3,  c("country"))
+
+colnames(gdp4)
 ```
 
