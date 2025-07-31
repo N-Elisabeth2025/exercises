@@ -45,7 +45,8 @@ Productivity growth started slowing down well before the financial crisis. Betwe
 
 The 2019 results of the GCI 4.0 reveal the size of the deficit in global competitiveness measures. The average GCI score across the 141 economies studied is 60.7, measured on a scale of 0 to 100, where 100 is the “frontier”, an ideal—and hypothetical—situation where a country achieves the perfect score on every component of the index. In other words, the global competitiveness gap—measured as the distance to the frontier—stands at almost 40 points (Figure 1).
 
-![Figure1:The state of global competitiveness in 2019](C:/Users/elisa/OneDrive/Bureau/devoir/fig1.png)
+
+![The state of global competitiveness in 2019](C:/Users/elisa/OneDrive/Bureau/devoir/fig1.png)
 
 
 
@@ -57,7 +58,8 @@ This section features regional trends and selected country analysis from the 201
 Overall, the results show that East Asia and the Pacific (17 countries) achieves the highest median score (73.9) among all regions, followed closely by Europe and North America (70.9, based on 39 countries). However, within the East Asia and the Pacific region the competitiveness gap between the best and worst performers is significantly larger (34.7) than in Europe and North America (28.9). This shows that, while many countries in East Asia and the Pacific have come a long way to bring their competitiveness up to a high level, there are a few that need to progress faster to bridge their gaps. For instance, comparing the lowest performers in East Asia and the Pacific and Europe and North America, Lao PDR’s score (50.1) remains about 5 points lower than that of Bosnia and Herzegovina (54.7). The Middle East & North Africa, Latin America and the Caribbean, and Sub-Saharan Africa present similar levels of dispersion in competitiveness performance (Figure 2).
 
 
-![Figure 2: Competitiveness gap within regions](C:/Users/elisa/OneDrive/Bureau/devoir/fig2.png)
+
+![Competitiveness gap within regions](C:/Users/elisa/OneDrive/Bureau/devoir/fig2.png)
 
 
 
