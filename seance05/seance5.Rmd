@@ -1,0 +1,47 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Diagramme en ligne
+
+```{r}
+library(readr)
+gdp5 <- read.csv("~/excercises/exercicesSeance4/chapter10data.csv")
+
+
+library(ggplot2)
+library(ggthemes)
+
+ggplot(data = gdp5, aes(x = year, y = gdp, colour = country)) + geom_line(linewidth = 1) + geom_point(size = 1) + xlab("Years") + ylab("Gross domestic product") +
+  labs(color = "Countries") + theme_minimal() + scale_color_brewer(direction = -1)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+
+
+### Diagramme à barres
+
+```{r}
+library(dplyr)
+gdp6 <- filter(gdp5, "year" == 2017)
+
+library(ggplot2)
+library(ggthemes)
+ggplot(data = gdp5, aes(x = country, y = gdp, fill = country)) + geom_bar(stat = "identity", width = 0.8, position = "dodge") + xlab("") + ylab("Gross domestic product") + labs(fill = "countries") + theme_minimal() + scale_fill_brewer(direction = 1)
+
+```
+
