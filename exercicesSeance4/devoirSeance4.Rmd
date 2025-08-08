@@ -1,0 +1,104 @@
+---
+title: "devoirSeance04"
+author: "Elisabeth"
+date: "2025-08-08"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Etape 1: importer des données
+
+
+```{r}
+gdp5 <- read.csv("~/excercises/exercicesSeance4/chapter10data.csv")
+```
+
+# Etape 2: creer un graphique linéaire
+
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+ggplot(data = gdp5, aes(x = year, y = gdp, color = country)) +
+  geom_line(linewidth = 1) +  
+  geom_point(linewidth= 1) +  
+  xlab("Years") +
+  ylab("Gross domestic product") +
+  labs(color = "Countries") +
+  theme_minimal() +
+  scale_color_brewer(direction = -1)
+```
+
+# Etape 3: Filtrer les données et ne garder que l'année 2017
+
+
+```{r}
+gdp6 <- filter(gdp5, "year" == 2017)
+```
+
+
+
+# Etape 4: creer un graphique à barres 
+
+
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+ggplot(data = gdp5, aes(x = country, y = gdp, fill= country)) + 
+  geom_bar(stat = "identity", width = 0.8, position = "dodge") + 
+  xlab("") +
+  ylab("Gross domestic product")  +
+  labs(fill = "countries")  +  
+  theme_minimal() + 
+  scale_fill_brewer(direction = 1)
+```
+
+
+
+# Etape 1: Impoter via un CSV
+
+
+
+```{r}
+gdp <- read.csv("~/excercises/exercicesSeance4/chapter6data.csv")
+```
+
+
+# Etape 2:Importez via un gsheet
+
+```{r}
+locations <- read.csv("https://docs.google.com/spreadsheets/d/1nehKEBKTQx11LZuo5ZJFKTVS0p5y1ysMPSOSX_m8dS8/edit?usp=sharing")
+```
+
+
+
+# Etape 3: supprimer la colonne
+
+```{r}
+gdp$X1 <- NULL
+
+colnames(gdp)
+```
+
+
+# Etape 4: Filtrer les données 
+
+```{r}
+library(dplyr)
+gdp2 <- filter(gdp, country == "France" | country =="United States" | country == "Canada" | country == "Belgium" | country == "Japan" )
+```
+
+# Etape 5 : rallonger les données
+
+
+```{r}
+library(tidyr)
+gdp3 <- pivot_longer(gdp2, cols = -country, names_to = "year", values_to ="gdp")
+```
+

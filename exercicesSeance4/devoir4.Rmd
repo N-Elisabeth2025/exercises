@@ -1,0 +1,19 @@
+---
+title: "devoirSeance4"
+author: "Elisabeth"
+date: "2025-08-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Etape1: importer des donnée
+
+
+```{r}
+gdp5 <- read.csv("~/excercises/exercicesSeance4/chapter10data.csv")
+```
+
